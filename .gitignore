@@ -1,0 +1,86 @@
+# =============================================================================
+# PHI / SENSITIVE DATA - CRITICAL
+# =============================================================================
+# NEVER commit patient data to version control
+data/
+data-derived/
+*.rds
+*.RDS
+*.rda
+*.RData
+*.sas7bdat
+*.dta
+*.sav
+*.xlsx
+*.xls
+*.csv
+
+# Exceptions: codebooks and data dictionaries (no PHI)
+!docs/**/*.docx
+!docs/**/*.pdf
+
+# =============================================================================
+# R / RStudio
+# =============================================================================
+.Rproj.user/
+.Rhistory
+.RData
+.Ruserdata
+*.Rproj
+
+# renv (package library is large and system-specific)
+renv/library/
+renv/staging/
+renv/python/
+renv/sandbox/
+renv/local/
+
+# targets cache (can be large, reproducible from code)
+_targets/
+_targets_packages/
+
+# =============================================================================
+# Output files (reproducible from pipeline)
+# =============================================================================
+output/models/
+output/figures/*.png
+output/figures/*.pdf
+output/tables/*.docx
+output/tables/*.html
+
+# =============================================================================
+# OS and IDE
+# =============================================================================
+.DS_Store
+Thumbs.db
+*.tmp
+*~
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# =============================================================================
+# Logs and temporary files
+# =============================================================================
+logs/
+*.log
+
+# =============================================================================
+# Rendered documents (reproducible from source)
+# =============================================================================
+reports/*_files/
+reports/*.html
+reports/*.pdf
+!reports/*.qmd
+!reports/*.Rmd
+
+# =============================================================================
+# Credentials and secrets
+# =============================================================================
+.Renviron
+.env
+*.pem
+*.key
+credentials/
+secrets/

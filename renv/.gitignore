@@ -1,0 +1,3 @@
+# Placeholder file
+# Run renv::init() in R to initialize package management
+# This will create renv.lock with exact package versions
